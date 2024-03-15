@@ -20,14 +20,12 @@ const Users = () => {
   const usersList = (
     <ul>
       {DUMMY_USERS.map((user) => (
-        <li key={user.id}>
-          <User />
-        </li>
+        <User key={user.id} name={user.name} />
       ))}
     </ul>
   );
   return (
-    <div classes={classes.users}>
+    <div className={classes.users}>
       <button onClick={toggleUsersHandler}>
         {showUsers ? "Hide" : "Show"}
       </button>
