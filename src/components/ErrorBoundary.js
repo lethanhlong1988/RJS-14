@@ -10,6 +10,7 @@ class ErrorBoundary extends Component {
     console.log(error);
     this.setState({ hasError: true });
   }
+
   render() {
     if (this.state.hasError) {
       return <p>Something went wrong!</p>;
